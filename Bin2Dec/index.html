@@ -11,8 +11,7 @@
        <form action="" class="form">
            <label for="">valores em byte</label><br>
             <input id="bytesId" onkeyup="getChar(value)" type="text">
-       </form>
-      
+       </form>      
     </div>
 
     <script>     
@@ -25,25 +24,27 @@
            for (let index = 0; index < bytes.length; index++)
            {
                if(bytes.length < 9)
-            {                
-                if(bytes[index] === "1" || bytes[index] === "0")
-                {                 
-                   console.log(bytes);
-                                      
+                {                
+                    if(bytes[index] === "1" || bytes[index] === "0")
+                    {                 
+                    console.log(bytes);
+                                        
+                    }
+                    else{
+                        return document.getElementById("bytesId").value = text;
+                    }
                 }
-                else{
+                else
+                {
                     return document.getElementById("bytesId").value = text;
-                }    
-            }
-            else
-            {
-                return document.getElementById("bytesId").value = text;
-            }
+                }
              
            }
            text = bytes;  
           
        }
+
+      
     </script>
 
 </body>
