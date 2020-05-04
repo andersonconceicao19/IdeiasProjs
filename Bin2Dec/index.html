@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bin2Dec</title>
+</head>
+<body>
+    <div class="main">
+       <form action="" class="form">
+           <label for="">valores em byte</label><br>
+            <input id="bytesId" onkeyup="getChar(value)" type="text">
+       </form>
+      
+    </div>
+
+    <script>     
+    let text;   
+       function getChar(bytes) {
+
+        /**
+         * Prende o usuario em digitar apenas 1 ou 0
+        */
+           for (let index = 0; index < bytes.length; index++)
+           {
+               if(bytes.length < 9)
+            {                
+                if(bytes[index] === "1" || bytes[index] === "0")
+                {                 
+                   console.log(bytes);
+                                      
+                }
+                else{
+                    return document.getElementById("bytesId").value = text;
+                }    
+            }
+            else
+            {
+                return document.getElementById("bytesId").value = text;
+            }
+             
+           }
+           text = bytes;  
+          
+       }
+    </script>
+
+</body>
+</html>
