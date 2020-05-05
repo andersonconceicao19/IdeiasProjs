@@ -10,7 +10,7 @@ let text ="";
                     if(bytes[index] === "1" || bytes[index] === "0")
                     {  
                         let xd = binarytodecimalService(bytes);
-                        document.getElementById('Resuldado').innerHTML = xd
+                        document.getElementById('Resuldado').innerHTML = `valor em decimal: ${xd}`
                         
                     }
                     else

@@ -12,6 +12,13 @@
     padding-top: 150px;
     padding-left: 100px;
 }
-
+.alinhar {
+    margin-top: 10px;
+    height: 40px;
+   
+}
+.alinhar p {
+    text-align: center;
+}
 
 
