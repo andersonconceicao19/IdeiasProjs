@@ -15,7 +15,7 @@
     </div>
 
     <script>     
-    let text;   
+    let text ="";   
        function getChar(bytes) {
 
         /**
@@ -26,11 +26,12 @@
                if(bytes.length < 9)
                 {                
                     if(bytes[index] === "1" || bytes[index] === "0")
-                    {                 
-                    console.log(bytes);
-                                        
+                    {                
+                        console.log(binarytodecimal(bytes)); //trabalhando aqui                         
                     }
-                    else{
+                    else
+                    {
+                        alert(`O valor "${bytes[index]}" não é aceito para efeito de converção.`)  
                         return document.getElementById("bytesId").value = text;
                     }
                 }
@@ -41,9 +42,47 @@
              
            }
            text = bytes;  
-          
        }
 
+       /*Aq*/
+       function binarytodecimal(param)
+       {
+           let b; 
+           let result;
+           let trava = false
+           let c = 0; 
+           let d= 0;
+
+           let iterador = parseInt(param.length)  - 1         
+            
+           for (let i = iterador; i >= 0; i--) 
+           {
+              
+               c++
+               if(trava) 
+               {
+                    b = parseInt(param[c - 1]);                      
+                    result = (b * (Math.pow(2, i)))
+                    console.log("true i "+ i +" -> Valor de b: " + b + " e da potencia calculada " + (b * (Math.pow(2, i))) );
+               }
+               else
+               {
+                b = parseInt(param[c - 1]);
+                result = (b * (Math.pow(2, i)));   
+                console.log("False i "+ i +" -> Valor de b: " + b + " e da potencia calculada " + (b * (Math.pow(2, i))) );
+                
+                trava = true;               
+               }
+              d += result;
+              result= 0;
+            
+             
+           }
+          
+           
+           return "";
+           
+       }
       
     </script>
 
