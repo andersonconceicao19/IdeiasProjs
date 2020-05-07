@@ -1,0 +1,10 @@
+#box-child{
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+
+    /*Ve o que fazer*/
+    border-start-end-radius: 100px;
+    border-start-start-radius: 100px;
+}

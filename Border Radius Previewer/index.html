@@ -4,22 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Border Radius Previewer</title>
- 
+    <!--<link rel="stylesheet" href="style.css">-->
 </head>
 <body>
 
     <div id="box">
-        <input type="text" id="direita-acima" placeholder="direita-acima" >
-        <input type="text" id="esquerda-acima" placeholder="esquerda-acima" >
-        <input type="text" id="direita-abaixo" placeholder="direita-baixo" >
-        <input type="text" id="esquerda-abaixo" placeholder="esquerda-baixo">
-        <div class="box-child" style="background: red; height: 100px; width: 100px;"></div>
+        <form action="" onkeyup="AlterarClasse()">
+            <input type="text" id="direita-acima" placeholder="direita-acima"  >
+            <input type="text" id="esquerda-acima" placeholder="esquerda-acima" >
+            <input type="text" id="direita-abaixo" placeholder="direita-baixo" >
+            <input type="text" id="esquerda-abaixo" placeholder="esquerda-baixo"  >
+        </form>
+        <br>
+        <hr>
+        <div id="box-child" style="background: red; height: 500px; width: 500px;"></div>
     </div>
 
     <script>
-      
-
-
+        function AlterarClasse()
+        {
+            var DA = document.getElementById('direita-acima').value
+            console.log(DA);
+            var EA = document.getElementById('esquerda-acima').value
+            console.log(EA);
+            var DB = document.getElementById('direita-abaixo').value
+            console.log(DB);
+            var EB =document.getElementById('esquerda-abaixo').value
+            console.log(EB);
+            document.getElementById('box-child').style = `
+            background: red;
+            height: 500px;
+            width: 500px;
+            border-top-left-radius: ${EA}px;
+            border-top-right-radius: ${DA}px;  
+            border-bottom-left-radius: ${EB}px ;
+            border-bottom-right-radius: ${DB}px;
+             ` 
+        }
+        
     </script>
 </body>
 </html>
