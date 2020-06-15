@@ -1,0 +1,52 @@
+<div class="main">
+    <div class="boxt">
+        <table #valor (click)="getval($event.target.value)" >
+            <tr>
+                <td colspan="4">
+                    <input type="text" disabled [value]="inputvalue" >
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button  class="tam" type="text" value="C" >
+                        C
+                    </button>
+                </td>
+                <td>
+                    <button type="text" value="BACK" >
+                        back
+                    </button>
+                </td>  
+                <td>
+                    <button type="text" value="/">
+                        /
+                    </button>
+                </td>
+               
+            </tr>
+            <tr>
+                <td><button type="text" value="7">7</button></td>
+                <td><button type="text" value="8">8</button></td>
+                <td><button type="text" value="9">9</button></td>
+                <td><button type="text" value="x">x</button></td>
+            </tr>
+            <tr>
+               <td><button type="text" value="4">4</button></td>
+               <td><button type="text" value="5">5</button></td> 
+               <td><button type="text" value="6">6</button></td>
+               <td><button type="text" value="-">-</button></td>
+            </tr>
+            <tr>
+                <td><button type="text" value="1">1</button></td>
+                <td><button type="text" value="2">2</button></td>
+                <td><button type="text" value="3">3</button></td>
+                <td><button type="text" value="+">+</button></td>
+            </tr>
+            <tr>
+                <td><button type="text" value=".">,</button></td>
+                <td colspan="2"><button type="text"  class="tam" value="0">0</button></td>
+                <td><button type="text" value="=">=</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
